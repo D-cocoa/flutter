@@ -100,6 +100,7 @@ const List<String> titles = [
   "Really nice",
   "Yeap"
 ];
+
  List images=['images/1.JPG','images/2.JPG','images/3.JPG','images/4.JPG','images/5.JPG'];
 class ExampleHorizontal extends StatelessWidget {
   @override
