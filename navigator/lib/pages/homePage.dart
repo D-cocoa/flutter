@@ -17,9 +17,10 @@ class _homePageState extends State<homePage> {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Expanded(
-          flex: 1,
+         
           child:Container(
             height: 50,
+            
             child: TextButton(onPressed: (){
               Navigator.pushNamed(context, '/info',arguments:objectArguments('title', 'message', {'id':'我是字典'}));
             //Navigator.pushNamed(context,'/info',arguments: {'id':'GOGOGO'});
@@ -58,7 +59,7 @@ class _homePageState extends State<homePage> {
           )
 
       ),Expanded(
-          flex: 2,
+          flex: 1,
           child: Container(
             height: 50,
             child: TextButton(onPressed: (){
@@ -76,9 +77,10 @@ class _homePageState extends State<homePage> {
 
       )
       ),Expanded(
-          flex: 1,
+         // flex: 1,
           child: Container(
             height: 50,
+        
             child: TextButton.icon(onPressed: (){}, 
             icon: Icon(Icons.settings), label: Text('设置'),
             style: ButtonStyle(

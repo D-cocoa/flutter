@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'array.dart';
 
+// ignore: camel_case_types
 class tabs extends StatefulWidget {
   
   const tabs({ Key? key}) : super(key: key);

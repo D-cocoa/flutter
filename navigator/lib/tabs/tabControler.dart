@@ -7,6 +7,7 @@ class TabBarControllerpage extends StatefulWidget {
 }
 class _TabBarControllerpageState extends State<TabBarControllerpage> with SingleTickerProviderStateMixin{
   late TabController _tabC;
+  int _index = 0 ;
   @override
   void dispose() {//生命周期函数，销毁
     // TODO: implement dispose
@@ -16,10 +17,14 @@ class _TabBarControllerpageState extends State<TabBarControllerpage> with Single
   @override
   void initState() {
     super.initState();
-    _tabC = new TabController(length: 2, vsync: this) ;
-    print(_tabC);
+    _tabC = new TabController(length: 4, vsync: this,initialIndex: _index) ;
+
     _tabC.addListener(() {
       print('监听变化--${_tabC.indexIsChanging}--${_tabC.offset}');
+      //改变状态需要用这个方法
+      setState(() {
+        _index = _tabC.index;
+      });
     });
     
 
@@ -30,9 +35,9 @@ class _TabBarControllerpageState extends State<TabBarControllerpage> with Single
       appBar: AppBar(
              title:TabBar(
                controller:  this._tabC,
-               tabs:[Text('关注'),Text('发现')],
+               tabs:[Text('关注'),Text('发现'),Text('搜索'),Text('更多')],
                //isScrollable: true,//是否滑动
-               indicatorSize: TabBarIndicatorSize.label,
+               indicatorSize: TabBarIndicatorSize.label,//下方颜色条的大小
                ),
               // Row(
               //  children: [
@@ -44,11 +49,17 @@ class _TabBarControllerpageState extends State<TabBarControllerpage> with Single
          controller: this._tabC,
          children: [
            ListView(
-           children: [ListTile(title:Text('111'))],
+           children: [ListTile(title:Text(_tabC.index.toString()*200))],
          ),
          ListView(
-           children: [ListTile(title:Text('222'),)],
-         )
+           children: [ListTile(title:Text(_tabC.index.toString()*200),)],
+         ),
+         ListView(
+           children: [ListTile(title:Text(_tabC.index.toString()*200))],
+         ),
+         ListView(
+           children: [ListTile(title:Text(_tabC.index.toString()*200),)],
+         ),
         
          ]
          ),

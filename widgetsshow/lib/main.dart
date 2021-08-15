@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
@@ -134,12 +133,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
           ],
         ),
+        //线性进度条
         LinearProgressIndicator(
           value: 0.5,
           color: Colors.red,
           backgroundColor:  Colors.black,
           minHeight: 10,
-        )]
+          valueColor: AlwaysStoppedAnimation(Colors.yellow),
+        ),
+        SizedBox(height: 20),
+        //自定义大小外层加container
+        CircularProgressIndicator(
+          value: 0.3,
+          strokeWidth: 60,
+          valueColor: AlwaysStoppedAnimation(Colors.yellow),
+
+
+        )
+        ]
       ),
  ));
 }

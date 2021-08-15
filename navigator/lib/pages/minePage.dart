@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: camel_case_types
 class minePage extends StatefulWidget {
   const minePage({ Key? key }) : super(key: key);
 
@@ -10,6 +11,7 @@ class _minePageState extends State<minePage> {
    var _accountNumber = new TextEditingController();
    var _scureText = new TextEditingController(); 
    @override
+  // ignore: must_call_super
   void initState() {
     // TODO: implement initState
     _accountNumber.text ='18239796155';
@@ -21,11 +23,13 @@ class _minePageState extends State<minePage> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         SizedBox(height: 50),
-        Container(child: TextField(
+        Container(
+          child: TextField(
           onChanged: (String textStr){
              //  限制账号结构
           },
           controller: _accountNumber,
+          
           decoration: InputDecoration(
             //icon: Icon(Icons.people),
           //  hintText: '用户名或者手机号',
