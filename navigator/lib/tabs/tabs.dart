@@ -15,10 +15,11 @@ class _tabsState extends State<tabs> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
-         title: Text(tabsTitleArray[this.currentIndex]),
-         centerTitle: true,
-      ),
+      //也可以写在每个单独页面
+      // appBar: AppBar(
+      //    title: Text(tabsTitleArray[this.currentIndex]),
+      //    centerTitle: true,
+      // ),
       body: tabsContainerArray[this.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
@@ -27,7 +28,7 @@ class _tabsState extends State<tabs> {
         BottomNavigationBarItem(icon: Icon(Icons.face),label: tabsTitleArray[2]),
         BottomNavigationBarItem(icon: Icon(Icons.person),label: tabsTitleArray[3])],
         currentIndex: this.currentIndex,
-        type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.fixed,//超过3个需要加此条
         onTap: (int index){
             print('点击的是第$index个tab');
             setState(() {
@@ -68,7 +69,7 @@ class _tabsState extends State<tabs> {
               // ), 
               )
               ],),
-              
+              //分割线
               //Divider(color: Colors.grey,),
               ListTile(
                 title: Text('空间'),
@@ -93,16 +94,12 @@ class _tabsState extends State<tabs> {
             ]
           ),
         ), 
-        endDrawer: Drawer(
-          child: Text('再见'),
-        ), 
+        // endDrawer: Drawer(
+        //   child: Text('再见'),
+        // ), 
     );
     
   }
 }
 
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
+ 
