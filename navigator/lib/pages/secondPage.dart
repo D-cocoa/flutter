@@ -7,9 +7,9 @@ class secondPage extends StatefulWidget {
 }
 
 class _secondPageState extends State<secondPage> with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin{
-  late bool showBtn=false;
+  
   late TabController _tabB;
-  //late int _aaaa;
+  late int _aaaa;
   List citySite = ['市区', '叶县', '郏县', '宝丰', '鲁山', '石龙区', '舞钢'];
   @override
   void initState() {
@@ -17,17 +17,12 @@ class _secondPageState extends State<secondPage> with SingleTickerProviderStateM
     _tabB = new TabController(length:citySite.length, vsync: this,initialIndex: 0) ;
     _tabB.addListener(() {
       //改变状态需要用这个方法
-      
-      if (_tabB.offset >100 && showBtn==false) {
+      print('偏移量----${_tabB.offset}');
          setState(() {
-           showBtn =true;
-        //_aaaa = _tabB.index;
-      });
-      print('偏移量----$_tabB');
-
-      }
-     
-    });
+        _aaaa = _tabB.index;
+        print('_aaaa的值是$_aaaa');
+      });}
+     );
   }//初始化 _tabController
   
   @override
@@ -36,13 +31,6 @@ class _secondPageState extends State<secondPage> with SingleTickerProviderStateM
       // appBar: AppBar(
       //   title: Text('内容可自定义'),
       //   centerTitle: true,
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      floatingActionButton: showBtn ? FloatingActionButton(
-        child: Icon(Icons.vertical_align_top),
-        onPressed: (){
-
-
-      }):null,
       appBar: AppBar(
              title:TabBar(
                controller: _tabB,
