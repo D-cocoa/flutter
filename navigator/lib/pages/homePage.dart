@@ -100,7 +100,12 @@ class _homePageState extends State<homePage> {
      
     ),
     drawer: Drawer(
-          child: Column(
+          child:
+          // MediaQuery.removePadding(
+          //   removeTop: true,       //移除手机设备内边距
+          //   context: context, 
+          //   child: 
+             Column(
             children: [ Row(
                 children: [ Expanded(  //使子元素布满空间
                   child:UserAccountsDrawerHeader(
@@ -154,8 +159,7 @@ class _homePageState extends State<homePage> {
                   child: Icon(Icons.settings))),
               Divider(color: Colors.red),
             ]
-          ),
-        ), 
+          ),)
     );
 }
 }
