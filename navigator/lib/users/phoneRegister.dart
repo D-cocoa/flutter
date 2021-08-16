@@ -10,24 +10,26 @@ class phoneRegister extends StatelessWidget {
           title: Text('第二步-手机验证'),
         ),
         body:Center(
-          child: Column(
+          child: Row(
             children: [
-              SizedBox(height: 50),
-              Container(
-            width: 80,
-            height: 50,
-            color: Colors.green,
-            child:ElevatedButton(onPressed: (){
+              Expanded(
+                child:  Container(
+                margin: EdgeInsets.only(left: 20,right: 20),
+                height: 50,
+                color: Colors.green,
+                child:ElevatedButton(onPressed: (){
+         
               Navigator.pushReplacementNamed(context, '/finish');
-            // Navigator.pushNamed(context, '/finish');
-          }, style: ButtonStyle(
+   
+          },   
+            style: ButtonStyle(
 
           ),child: Text('下一步'),
           ) ,
-           ) ,
-            ],
-
-          ),
+           )
+               )
+                ],
+          )
         ),
       ),
     );

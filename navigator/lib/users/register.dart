@@ -4,32 +4,38 @@ class register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           title: Text('第一步-注册页面'),
         ),
         body:Center(
-          child: Column(
+          child: Row(
             children: [
-              Container(
-            width: 80,
-            height: 50,
-            color: Colors.green,
-            child:ElevatedButton(onPressed: (){
+              Expanded(
+                child:  Container(
+                margin: EdgeInsets.only(left: 20,right: 20),
+                height: 50,
+                color: Colors.green,
+                child:ElevatedButton(onPressed: (){
               //替换路由，直接返回到根页面--看具体需求
               Navigator.pushReplacementNamed(context, '/phoneRegister');
            // Navigator.pushNamed(context, '/phoneRegister');
-          }, style: ButtonStyle(
+          },   
+            style: ButtonStyle(
 
           ),child: Text('下一步'),
           ) ,
-           ) ,
-            ],
+           )
+               )
+                ],
+          )
+            
+           
+            
 
-          ),
-        ),
-      ),
+          )
+        
+      
     );
   }
 }
