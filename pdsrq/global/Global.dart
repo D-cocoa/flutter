@@ -51,13 +51,17 @@ class Global{
     },
     onError: (DioError e, handler) {
      // Do something with response error
-     print('请求错误'+ e.toString());
+     if (e.type ==DioErrorType.connectTimeout) {
+       print('连接超时');
+     }else{
+       print('接口错误');
+     }
      return  handler.next(e);//continue
      // 如果你想完成请求并返回一些自定义数据，可以resolve 一个`Response`,如`handler.resolve(response)`。
      // 这样请求将会被终止，上层then会被调用，then中返回的数据将是你的自定义response.
     }
 ));
 
-    );
+  
   }
 }
