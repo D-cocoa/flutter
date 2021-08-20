@@ -44,7 +44,7 @@ dependencies:
   #flutter weui UI框架
   weui: ^0.0.8
   #极光推送
-  jpush_flutter: ^2.1.5
+  #jpush_flutter: ^2.1.5
   #图片压缩
   flutter_luban: ^0.1.13
   #轮播图
@@ -73,9 +73,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
