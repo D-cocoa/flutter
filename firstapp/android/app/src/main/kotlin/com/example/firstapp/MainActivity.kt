@@ -1,4 +1,4 @@
-package com.example.pdsrq
+package com.example.firstapp
 
 import io.flutter.embedding.android.FlutterActivity
 
