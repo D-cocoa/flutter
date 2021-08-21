@@ -13,6 +13,8 @@ class _LoginViewState extends State<LoginView> {
     return Scaffold(
       appBar: AppBar(
         title: Text('登录'),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
       ),
     );
   }
