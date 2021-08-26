@@ -17,7 +17,7 @@ class _LoadingState extends State<Loading> {
 
     new Future.delayed(Duration(seconds: 3),(){
         //3秒后跳转到其他路由
-        Navigator.of(context).pushReplacementNamed("/app");
+        Navigator.of(context).pushReplacementNamed("/");
     });
 
   }

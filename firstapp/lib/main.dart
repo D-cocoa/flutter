@@ -18,7 +18,7 @@ class _AppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //启动页组件
-      home:Loading(),
+     // home:Loading(),
 
       theme: ThemeData(
         //主题色
@@ -29,7 +29,7 @@ class _AppState extends State<MyApp> {
       ),
       routes: <String,WidgetBuilder>
       {
-        "/app":(context)=>LoginView(),
+        "/":(context)=>LoginView(),
       },
     
     );
