@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../global/Global.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -9,6 +10,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
+  void loadData() async{
+     await Global.getInstance()!.dio.get('/get');
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
