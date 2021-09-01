@@ -1,4 +1,3 @@
-import 'dart:js_util';
 
 import 'package:dio/dio.dart';
 
