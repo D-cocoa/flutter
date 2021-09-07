@@ -130,11 +130,12 @@ class _LoginPageState extends State<LoginPage> {
               height: 40,
             
               child:ElevatedButton(onPressed: (){
-                if (_textAccount=='18239796155' &&_textScure=='39796155') {
+                if (_textAccount=='110' &&_textScure=='6155') {
                   Navigator.popAndPushNamed(context, 'home');
 
                 }else{
-                     _showLoginError();
+                    // _showLoginError();
+                    _showLoginAlert();
                 }
                 
 
@@ -157,7 +158,7 @@ _showLoginError(){
     );
   });
 }
-/*
+
 _showLoginAlert(){
   showDialog(context: context, builder: (context){
     return AlertDialog(
@@ -166,5 +167,5 @@ _showLoginAlert(){
     );
   });
 }
-*/
+
 }
